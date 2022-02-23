@@ -1,9 +1,7 @@
 function contar() {
-  let numeroInicial = window.document.getElementById('numeroInicial')
-
+  let numeroInicial = window.document.getElementById('numeroInicial') //inicialização da variaveis sem conversão para Number, para permitir validação por length.
   let numeroFinal = window.document.getElementById('numeroFinal')
   let numeroDePassos = window.document.getElementById('numeroDePassos')
-
   let elem = window.document.getElementById('resultado')
 
   if (
@@ -11,11 +9,10 @@ function contar() {
     numeroFinal.value.length == 0 ||
     numeroDePassos.value.length == 0
   ) {
-    //Validação se caso numero inicial for 0.
-    elem.innerHTML = 'Impossível contar!'
+    elem.innerHTML = 'Impossível contar!' //Validação se caso algum campo não for digitado.
   } else {
     elem.innerHTML = 'Contando: <br>'
-    let numInicial = Number(numeroInicial.value)
+    let numInicial = Number(numeroInicial.value) // Conversão para Number da variaveis.
     let numFinal = Number(numeroFinal.value)
     let numPassos = Number(numeroDePassos.value)
     if (numPassos <= 0) {
