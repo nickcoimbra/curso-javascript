@@ -11,7 +11,8 @@ function contar() {
     numeroFinal.value.length == 0 ||
     numeroDePassos.value.length == 0
   ) {
-    elem.innerHTML = 'Impossível contar!' //Validação se caso numero inicial for 0.
+    //Validação se caso numero inicial for 0.
+    elem.innerHTML = 'Impossível contar!'
   } else {
     elem.innerHTML = 'Contando: <br>'
     let numInicial = Number(numeroInicial.value)
@@ -32,6 +33,7 @@ function contar() {
         elem.innerHTML += `${i} 👉`
       }
     }
+
+    elem.innerHTML += `🏁` //fim de curso
   }
-  elem.innerHTML += `🏁` //fim de curso
 }
